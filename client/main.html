@@ -1,0 +1,18 @@
+<head>
+  <title>bundle</title>
+</head>
+
+<body>
+  {{> bundle}}
+</body>
+
+<template name="bundle">
+  {{#each doc in list}}
+    {{>entry id=doc._id name=doc.name}}
+  {{/each}}
+  <div><button class="add">+</button> <input type="text" length=40></div>
+</template>
+
+<template name="entry">
+  <div><button class="remove" id="{{id}}">x</button> {{name}}</div>
+</template>
