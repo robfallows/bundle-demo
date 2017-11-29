@@ -3,8 +3,8 @@ import { PersonCollection } from '/imports/both/PersonCollection';
 import { BundleCollection } from '/imports/both/BundleCollection';
 
 Template.bundle.onCreated(function () {
-  const bPub = this.subscribe('bundlePub', 'ABC');
   this.autorun(() => {
+  const bPub = this.subscribe('bundlePub', 'ABC');
     if (bPub.ready()) {
       // Build id list
       // ids = array of id from bundle list
